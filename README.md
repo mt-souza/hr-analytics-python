@@ -26,11 +26,6 @@ O projeto segue uma lógica bem prática: primeiro entender e limpar os dados, d
 - [O que foi analisado](#o-que-foi-analisado)
 - [KPIs calculados](#kpis-calculados)
 - [Principais achados](#principais-achados)
-- [Recomendações](#recomendações)
-- [Estrutura do projeto](#estrutura-do-projeto)
-- [Como rodar](#como-rodar)
-- [Próximos passos](#próximos-passos)
-- [Autor](#autor)
 
 ## O dataset
 
