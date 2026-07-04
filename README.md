@@ -13,9 +13,9 @@ Análise exploratória de uma base de Recursos Humanos com 311 colaboradores, co
 
 O ponto de partida foi simples: uma base de RH com informações de contratação, desligamento, salário, performance e engajamento de 311 funcionários, e a pergunta "o que dá pra aprender daqui que ajudaria a empresa a reter gente boa e gastar melhor com folha de pagamento?".
 
-Rotatividade é caro. Contratar, treinar e integrar um novo funcionário custa tempo e dinheiro, e quando isso acontece de forma recorrente em certos cargos ou departamentos, geralmente é sintoma de algo estrutural — não coincidência. Essa análise tenta separar o que é ruído do que é padrão, cruzando turnover com salário, satisfação, engajamento, performance e participação em projetos especiais.
+Rotatividade é caro. Contratar, treinar e integrar um novo funcionário custa tempo e dinheiro, e quando isso acontece de forma recorrente em certos cargos ou departamentos, geralmente é sintoma de algo estrutural, não coincidência. Essa análise tenta separar o que é ruído do que é padrão, cruzando turnover com salário, satisfação, engajamento, performance e participação em projetos especiais.
 
-O projeto segue uma lógica bem prática: primeiro entender e limpar os dados, depois explorar o perfil demográfico da empresa, para então ir fundo nos temas que mais importam pra gestão — salário, desempenho, absenteísmo e rotatividade — terminando com uma leitura cruzada entre esses fatores.
+O projeto segue uma lógica bem prática: primeiro entender e limpar os dados, depois explorar o perfil demográfico da empresa, para então ir fundo nos temas que mais importam para a gestão, salário, desempenho, absenteísmo e rotatividade, terminando com uma leitura cruzada entre esses fatores.
 
 ## Índice
 
@@ -60,31 +60,31 @@ Algumas das colunas mais relevantes para a análise:
 
 Antes de qualquer análise, a base passou por uma checagem básica de qualidade:
 
-- **Nulos**: as únicas colunas com valores ausentes foram `DateofTermination` (funcionários ainda ativos) e `ManagerID` (cargos de topo sem um gestor cadastrado) — em nenhum dos dois casos isso representa erro nos dados.
+- **Nulos**: as únicas colunas com valores ausentes foram `DateofTermination` (funcionários ainda ativos) e `ManagerID` (cargos de topo sem um gestor cadastrado), em nenhum dos dois casos isso representa erro nos dados.
 - **Duplicados**: nenhuma linha ou `EmpID` duplicado foi encontrado.
 - **Registros inconsistentes**: dois nomes fictícios ("Voldemort, Lord" e "Corleone, Vito") foram identificados e removidos da base, reduzindo o total de 311 para 309 registros válidos analisados no restante do notebook.
 - **Datas**: as colunas de data (`DOB`, `DateofHire`, `DateofTermination`, `LastPerformanceReview_Date`) estavam como texto e foram convertidas para o formato datetime, incluindo uma correção de século em datas de nascimento que vieram com ano futuro por conta do formato de dois dígitos.
-- **Outliers**: `Salary`, `EngagementSurvey`, `EmpSatisfaction`, `Absences` e `DaysLateLast30` foram inspecionados via `describe()` — os valores mais altos de salário são condizentes com cargos de liderança, sem outliers artificiais a tratar.
+- **Outliers**: `Salary`, `EngagementSurvey`, `EmpSatisfaction`, `Absences` e `DaysLateLast30` foram inspecionados via `describe()`, os valores mais altos de salário são condizentes com cargos de liderança, sem outliers artificiais a tratar.
 
 A partir daí, duas colunas foram criadas para viabilizar boa parte da análise: `Idade` (calculada a partir da data de nascimento) e `TempoEmpresaAnos` (tempo de casa, considerando a data de desligamento quando aplicável ou a data de referência para funcionários ativos).
 
 ## O que foi analisado
 
-**Perfil demográfico** — distribuição por sexo, estado civil, etnia, departamento, cargo, estado e faixa etária.
+**Perfil demográfico:** distribuição por sexo, estado civil, etnia, departamento, cargo, estado e faixa etária.
 
-**Análise salarial** — salário médio por departamento, cargo, gênero e nível de performance, além dos funcionários mais e menos remunerados.
+**Análise salarial:** salário médio por departamento, cargo, gênero e nível de performance, além dos funcionários mais e menos remunerados.
 
-**Performance** — distribuição das avaliações, performance por departamento, gestor e cargo, e sua relação com satisfação.
+**Performance:** distribuição das avaliações, performance por departamento, gestor e cargo, e sua relação com satisfação.
 
-**Satisfação e engajamento** — médias por departamento, cargo e gestor, e como se comportam frente aos diferentes níveis de performance.
+**Satisfação e engajamento:** médias por departamento, cargo e gestor, e como se comportam frente aos diferentes níveis de performance.
 
-**Absenteísmo** — atrasos e faltas por departamento, e quais funcionários mais se destacam nesses indicadores.
+**Absenteísmo:** atrasos e faltas por departamento, e quais funcionários mais se destacam nesses indicadores.
 
-**Turnover** — taxa geral e recortada por departamento, cargo e gestor.
+**Turnover:** taxa geral e recortada por departamento, cargo e gestor.
 
-**Projetos especiais** — comparação entre quem participou e quem não participou de projetos especiais, em salário, engajamento, satisfação e performance.
+**Projetos especiais:** comparação entre quem participou e quem não participou de projetos especiais, em salário, engajamento, satisfação e performance.
 
-**Cruzamentos finais** — satisfação x salário, engajamento x salário, e atrasos/faltas x performance.
+**Cruzamentos finais:** satisfação x salário, engajamento x salário, e atrasos/faltas x performance.
 
 ## KPIs calculados
 
@@ -102,13 +102,13 @@ A partir daí, duas colunas foram criadas para viabilizar boa parte da análise:
 ## Principais achados
 
 **Turnover é alto em cargos técnicos específicos, não distribuído de forma uniforme.**
-Cargos como *Principal Data Architect*, *Data Analyst* e *Enterprise Architect* aparecem com 100% de rotatividade, enquanto departamentos inteiros como *Executive Office* não registraram nenhum desligamento no período. Isso é um sinal mais forte do que a taxa geral de 33% sozinha — o problema está concentrado, não espalhado.
+Cargos como *Principal Data Architect*, *Data Analyst* e *Enterprise Architect* aparecem com 100% de rotatividade, enquanto departamentos inteiros como *Executive Office* não registraram nenhum desligamento no período. Isso é um sinal mais forte do que a taxa geral de 33% sozinha, o problema está concentrado, não espalhado.
 
-**Salário parece mais ligado a hierarquia do que a performance.**
+**Salário parece mais ligado à hierarquia do que à performance.**
 A variação salarial entre diferentes notas de avaliação de desempenho é pequena, o que sugere que a remuneração acompanha o nível do cargo muito mais do que o quão bem a pessoa está performando nele.
 
 **Participar de projetos especiais está associado a salários mais altos e melhores avaliações.**
-Funcionários que passaram por pelo menos um projeto especial têm remuneração significativamente maior e mais avaliações "Fully Meets" — mas a diferença em satisfação e engajamento entre os dois grupos é pequena, indicando que o impacto aparece mais no bolso do que na percepção do funcionário sobre o trabalho.
+Funcionários que passaram por pelo menos um projeto especial têm remuneração significativamente maior e mais avaliações "Fully Meets", mas a diferença em satisfação e engajamento entre os dois grupos é pequena, indicando que o impacto aparece mais no bolso do que na percepção do funcionário sobre o trabalho.
 
 **"Executive Office" é o setor com maiores salários e também com a satisfação mais baixa.**
 Com média de satisfação de 3,0 (a menor entre os departamentos), essa combinação de bom salário e baixa satisfação é um ponto de atenção específico para a liderança da empresa.
@@ -116,5 +116,5 @@ Com média de satisfação de 3,0 (a menor entre os departamentos), essa combina
 **Faltas e atrasos não se concentram em nenhum departamento nem se relacionam claramente com performance.**
 Isso indica que o absenteísmo tende a ser mais uma questão individual do que um problema estrutural de algum setor específico.
 
-**A performance média dos gestores está entre 2,7 e 3,2 — abaixo do esperado.**
+**A performance média dos gestores está entre 2,7 e 3,2, abaixo do esperado.**
 Esse número, combinado ao turnover elevado em times técnicos, levanta a hipótese de que parte da rotatividade possa estar relacionada à qualidade da gestão, não apenas ao cargo em si.
