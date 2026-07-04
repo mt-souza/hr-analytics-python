@@ -123,11 +123,3 @@ Isso indica que o absenteísmo tende a ser mais uma questão individual do que u
 
 **A performance média dos gestores está entre 2,7 e 3,2 — abaixo do esperado.**
 Esse número, combinado ao turnover elevado em times técnicos, levanta a hipótese de que parte da rotatividade possa estar relacionada à qualidade da gestão, não apenas ao cargo em si.
-
-## Recomendações
-
-- Investigar a fundo os cargos com 100% de turnover (arquitetura de dados e análise de dados) — pode ser questão salarial, de mercado ou de gestão direta.
-- Rever a política de reconhecimento no *Executive Office*: salário alto não está compensando a baixa satisfação registrada.
-- Usar a participação em projetos especiais como ferramenta de retenção e desenvolvimento, já que está ligada a melhor performance.
-- Acompanhar de perto a performance dos gestores com notas mais baixas, cruzando com o turnover dos times que lideram.
-- Tratar o absenteísmo caso a caso, já que os dados não indicam um padrão departamental — sugerindo conversas individuais em vez de políticas gerais.
