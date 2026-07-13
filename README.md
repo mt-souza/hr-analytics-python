@@ -102,13 +102,13 @@ A partir daí, duas colunas foram criadas para viabilizar boa parte da análise:
 ## Principais achados
 
 **Turnover é alto em cargos técnicos específicos, não distribuído de forma uniforme.**
-Cargos como *Principal Data Architect*, *Data Analyst* e *Enterprise Architect* aparecem com 100% de rotatividade, enquanto departamentos inteiros como *Executive Office* não registraram nenhum desligamento no período. Isso é um sinal mais forte do que a taxa geral de 33% sozinha, o problema está concentrado, não espalhado.
+Cargos como *Principal Data Architect*, *Data Analyst* e *Enterprise Architect* aparecem com 100% de rotatividade, enquanto departamentos como *Executive Office* não registraram nenhum desligamento no período. Isso é um sinal mais forte do que a taxa geral de 33% sozinha, o problema está concentrado, não espalhado.
 
 **Salário parece mais ligado à hierarquia do que à performance.**
 A variação salarial entre diferentes notas de avaliação de desempenho é pequena, o que sugere que a remuneração acompanha o nível do cargo muito mais do que o quão bem a pessoa está performando nele.
 
 **Participar de projetos especiais está associado a salários mais altos e melhores avaliações.**
-Funcionários que passaram por pelo menos um projeto especial têm remuneração significativamente maior e mais avaliações "Fully Meets", mas a diferença em satisfação e engajamento entre os dois grupos é pequena, indicando que o impacto aparece mais no bolso do que na percepção do funcionário sobre o trabalho.
+Funcionários que passaram por pelo menos um projeto especial têm remuneração significativamente maior e mais avaliações "Fully Meets", mas a diferença em satisfação e engajamento entre os dois grupos é pequena.
 
 **"Executive Office" é o setor com maiores salários e também com a satisfação mais baixa.**
 Com média de satisfação de 3,0 (a menor entre os departamentos), essa combinação de bom salário e baixa satisfação é um ponto de atenção específico para a liderança da empresa.
