@@ -11,7 +11,7 @@ Análise exploratória de uma base de Recursos Humanos com 311 colaboradores, co
 
 ## Sobre o projeto
 
-O ponto de partida foi simples: uma base de RH com informações de contratação, desligamento, salário, performance e engajamento de 311 funcionários, e a pergunta "o que dá pra aprender daqui que ajudaria a empresa a reter gente boa e gastar melhor com folha de pagamento?".
+O ponto de partida foi: uma base de RH com informações de contratação, desligamento, salário, performance e engajamento de 311 funcionários, e a pergunta "o que dá pra aprender daqui que ajudaria a empresa a reter gente boa e gastar melhor com folha de pagamento?".
 
 Rotatividade é caro. Contratar, treinar e integrar um novo funcionário custa tempo e dinheiro, e quando isso acontece de forma recorrente em certos cargos ou departamentos, geralmente é sintoma de algo estrutural, não coincidência. Essa análise tenta separar o que é ruído do que é padrão, cruzando turnover com salário, satisfação, engajamento, performance e participação em projetos especiais.
 
@@ -29,7 +29,7 @@ O projeto segue uma lógica bem prática: primeiro entender e limpar os dados, d
 
 ## O dataset
 
-A base utilizada é o clássico **HRDataset_v14**, amplamente usado em estudos de People Analytics, contendo 311 registros e 36 colunas com dados de identificação, demografia, cargo, salário, performance e histórico de contratação/desligamento.
+A base utilizada é o **HRDataset_v14**, usado em estudos de People Analytics, contendo 311 registros e 36 colunas com dados de identificação, demografia, cargo, salário, performance e histórico de contratação/desligamento.
 
 Algumas das colunas mais relevantes para a análise:
 
