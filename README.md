@@ -9,17 +9,7 @@ Análise exploratória de uma base de Recursos Humanos com 311 colaboradores, co
 ![Seaborn](https://img.shields.io/badge/Seaborn-4c72b0?style=flat)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 
-## Sobre o projeto
-
-O ponto de partida foi: uma base de RH com informações de contratação, desligamento, salário, performance e engajamento de 311 funcionários, e a pergunta "o que dá pra aprender daqui que ajudaria a empresa a reter gente boa e gastar melhor com folha de pagamento?".
-
-Rotatividade é caro. Contratar, treinar e integrar um novo funcionário custa tempo e dinheiro, e quando isso acontece de forma recorrente em certos cargos ou departamentos, geralmente é sintoma de algo estrutural, não coincidência. Essa análise tenta separar o que é ruído do que é padrão, cruzando turnover com salário, satisfação, engajamento, performance e participação em projetos especiais.
-
-O projeto segue uma lógica bem prática: primeiro entender e limpar os dados, depois explorar o perfil demográfico da empresa, para então ir fundo nos temas que mais importam para a gestão, salário, desempenho, absenteísmo e rotatividade, terminando com uma leitura cruzada entre esses fatores.
-
 ## Índice
-
-- [Sobre o projeto](#sobre-o-projeto)
 - [O dataset](#o-dataset)
 - [Ferramentas](#ferramentas)
 - [Limpeza e preparação dos dados](#limpeza-e-preparação-dos-dados)
